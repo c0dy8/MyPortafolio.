@@ -111,12 +111,12 @@
         <!-- NUEVAS ACTIVIDADES -->
         <div class="card">
             <h3>Actividad 1 MOODLE</h3>
-            <a href="https://github.com/c0dy8/m1_python_moodle_week_1">CLICK AQUI PARA VER!</a>
+            <a href="https://github.com/c0dy8/m1-python-moodle-week-1/blob/main/m1-python-moodle-week-1.py">CLICK AQUI PARA VER!</a>
         </div>
 
         <div class="card">
-            <h3>Actividad 2 m</h3>
-            <a href="#">CLICK AQUI PARA VER!</a>
+            <h3>AActividad 2 MOODLE</h3>
+            <a href="https://github.com/c0dy8/m1_python_Modlee_Week_2">CLICK AQUI PARA VER!</a>
         </div>
 
     </main>
@@ -124,43 +124,3 @@
     <footer>
         <p>Portafolio</p>
     </footer>
-
-
-    <script>
-        const canvas = document.getElementById("matrixCanvas");
-        const ctx = canvas.getContext("2d");
-
-        canvas.height = window.innerHeight;
-        canvas.width = window.innerWidth;
-
-        const letters = "01";
-        const fontSize = 16;
-        const columns = canvas.width / fontSize;
-
-        const drops = [];
-        for (let i = 0; i < columns; i++) drops[i] = 1;
-
-        function draw() {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = "#00ff88";
-            ctx.font = fontSize + "px monospace";
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = letters.charAt(Math.floor(Math.random() * letters.length));
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-
-        setInterval(draw, 35);
-    </script>
-
-</body>
-</html>
-
