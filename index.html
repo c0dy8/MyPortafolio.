@@ -1,23 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portafolio Hacker Minimalista</title>
 
-  
+    <style>
+        body {
+            margin: 0;
+            font-family: "Courier New", monospace;
+            color: #00ff88;
+            background-color: black;
+            overflow-x: hidden;
+        }
+
+        .matrix-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: black;
+            overflow: hidden;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* --- Contenido --- */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            border: 1px solid #00ff88;
+            padding: 20px;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.6);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #00ffcc;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #00ff88;
+        }
+    </style>
 </head>
 <body>
-      <h1> !!!Este es mi portafolio!!!</h1>
 
-      <tr>
-        <td>Actividad 1 M1-Python-Moodle-Week-1</td>
-        <td><a href="https://github.com/c0dy8/m1-python-moodle-week-1">Click Aqui Para ver la actividad.</a></td>
-      </tr>
-        <tr>
-        <td>Actividad 1 M1-Python-Moodle-Week-1</td>
-        <td><a href="https://github.com/c0dy8/m1_python_activida_1">Click Aqui Para ver la actividad.</a></td>
-      </tr>
-      <tr>h</tr>
+    <div class="matrix-background">
+        <canvas id="matrixCanvas"></canvas>
+    </div>
+
+    <header>
+        <h1>Welcome to my page</h1>
+        <p>Briam Santiago Vanegas Morales</p>
+    </header>
+
+    <h1 style="text-align: center;">Tares Robinson</h1>
+
+    <main class="container">
+        <div class="card">
+            <h3>Actividad 1</h3>
+            <a href="https://c0dy8.github.io/hoja-de-vida/">CLICK AQUI PARA VER!</a>
+        </div>
+
+        <div class="card">
+            <h3>Actividad 2</h3>
+            <a href="https://github.com/c0dy8/m1_python_activida_1">CLICK AQUI PARA VER!</a>
+        </div>
+
+        <div class="card">
+            <h3>Actividad 3</h3>
+            <a href="https://github.com/c0dy8/Animals">CLICK AQUI PARA VER!</a>
+        </div>
+
+        <div class="card">
+            <h3>Actividad 4</h3>
+            <a href="https://github.com/c0dy8/m1_python_activida_4">CLICK AQUI PARA VER!</a>
+        </div>
+<h1 style="text-align: center;">TAREAS MOODLE</h1>
+
+        <!-- NUEVAS ACTIVIDADES -->
+        <div class="card">
+            <h3>Actividad 1 MOODLE</h3>
+            <a href="https://github.com/c0dy8/m1_python_moodle_week_1">CLICK AQUI PARA VER!</a>
+        </div>
+
+        <div class="card">
+            <h3>Actividad 2 m</h3>
+            <a href="#">CLICK AQUI PARA VER!</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Portafolio</p>
+    </footer>
+
+
+    <script>
+        const canvas = document.getElementById("matrixCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        const letters = "01";
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const drops = [];
+        for (let i = 0; i < columns; i++) drops[i] = 1;
+
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#00ff88";
+            ctx.font = fontSize + "px monospace";
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters.charAt(Math.floor(Math.random() * letters.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 35);
+    </script>
+
 </body>
 </html>
+
