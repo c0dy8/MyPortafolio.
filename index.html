@@ -1,192 +1,79 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Briam.dev</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Hacker Minimalista</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Courier New", monospace;
-            color: #00ff88;
-            background-color: black;
-            overflow-x: hidden;
-        }
-
-        #matrixCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: black;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 0;
-            font-size: 2.2rem;
-            letter-spacing: 2px;
-            position: relative;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .card {
-            border: 1px solid #00ff88;
-            padding: 20px;
-            border-radius: 6px;
-            background: rgba(0, 0, 0, 0.6);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            background: rgba(0, 255, 136, 0.1);
-        }
-
-        .card h3 {
-            margin-top: 0;
-            color: #00ffcc;
-        }
-
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid #00ff88;
-            position: relative;
-            z-index: 2;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <canvas id="matrixCanvas"></canvas>
+<header class="navbar">
+    <div class="logo">&lt;<span></span> Briam<span>.dev</span> /&gt;</div>
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+        <button class="hire-btn">Hire Me :)</button>
+    </nav>
+</header>
 
-    <header>
-        <h1>Welcome to my page</h1>
-        <p>Briam Santiago Vanegas Morales</p>
-    </header>
+<section class="hero">
+    <p class="subtitle">CREATIVE DEVELOPER</p>
 
-    <h1 style="text-align: center;">Tares Robinson</h1>
+    <h1>
+        Hi, I'm <span class="highlight">Briam</span><br>
+        <span class="muted">I build digital</span><br>
+        experiences
+    </h1>
 
-    <main class="container">
+    <p class="description">
+        A passionate developer crafting beautiful, functional websites and
+        applications with modern technologies.
+    </p>
 
-        <div class="card">
-            <h3>Actividad 1</h3>
-            <a href="https://c0dy8.github.io/hoja-de-vida/">CLICK AQUI PARA VER!</a>
+    <div class="buttons">
+
+        <div class="dropdown">
+            <button class="btn primary dropdown-btn">Actividades Riwi</button>
+            <ul class="dropdown-menu">
+                <li><a href="https://github.com/c0dy8/m1-python-moodle-week-1/blob/main/m1-python-moodle-week-1.py">M1_Python_Moodle_Week_1</a></li>
+                <li><a href="https://github.com/c0dy8/m1_python_Modlee_Week_2/blob/main/inventario%20semana%202.py">M1_Python_Moodle_Week_2</a></li>
+                <li><a href="https://github.com/c0dy8/m1_python_Modlee_Week_3">M1_Python_Moodle_Week_3</a></li>
+                <li><a href="https://github.com/c0dy8/Mcarthy-EL-MILAGRO">M1_Python_Moodle_Week_4</a></li>
+                <li><a href="#">-----------------------</a></li>
+                <li><a href="#">M1_Python_HTML&CSS_Week_1</a></li>
+                <li><a href="#">M1_Python_HTML&CSS_Week_2</a></li>
+                <li><a href="#">M1_Python_HTML&CSS_Week_3</a></li>
+                <li><a href="#">M1_Python_HTML&CSS_Week_4</a></li>
+                <li><a href="#">------------------------</a></li>
+                <li><a href="#">M1_Python_Java_Script_1</a></li>
+                <li><a href="#">M1_Python_Java_Script_2</a></li>
+                <li><a href="#">M1_Python_Java_Script_3</a></li>
+                <li><a href="#">M1_Python_Java_Script_4</a></li>
+
+            </ul>
         </div>
 
-        <div class="card">
-            <h3>Actividad 2</h3>
-            <a href="https://github.com/c0dy8/m1_python_activida_1">CLICK AQUI PARA VER!</a>
+        <div class="dropdown">
+            <button class="btn secondary dropdown-btn">Actividades Robin</button>
+            <ul class="dropdown-menu">
+                <li><a href="https://c0dy8.github.io/hoja-de-vida/">Actividad 1</a></li>
+                <li><a href="https://github.com/c0dy8/m1_python_activida_1">Actividad 2</a></li>
+                <li><a href="https://github.com/c0dy8/Animals/blob/main/askdns.py">Actividad 3</a></li>
+                <li><a href="https://github.com/c0dy8/m1_python_activida_4">Actividad 4</a></li>
+                <li><a href="https://github.com/c0dy8/Inventario-500/blob/main/Inventario.py">Actividad 5</a></li>
+                <li><a href="https://github.com/c0dy8/-m1_python_activida_6">Actividad 6</a></li>
+                <li><a href="https://github.com/c0dy8/login-hmtl-css-robin/blob/main/actividad%206/index.html">Actividad 7</a></li>
+                <li><a href="#">Actividad 8</a></li>
+                <li><a href="#">Actividad 9</a></li>
+                <li><a href="#">Actividad 10</a></li>
+            </ul>
         </div>
 
-        <div class="card">
-            <h3>Actividad 3</h3>
-            <a href="https://github.com/c0dy8/Animals">CLICK AQUI PARA VER!</a>
-        </div>
-
-        <div class="card">
-            <h3>Actividad 4</h3>
-            <a href="https://github.com/c0dy8/m1_python_activida_4">CLICK AQUI PARA VER!</a>
-        </div>
-        
-        <div class="card">
-            <h3>Actividad 5</h3>
-             <a href="https://github.com/c0dy8/Inventario-500/blob/main/Inventario.py">CLICK AQUI PARA VER!</a>
-        </div>
-
-        <div class="card">
-            <h3>Actividad 6</h3>
-            <a href="https://github.com/c0dy8/-m1_python_activida_6">CLICK AQUI PARA VER!</a>
-        </div>
-
-        <h1 style="grid-column: 1 / -1; text-align:center;">TAREAS MOODLE</h1>
-
-        <div class="card">
-            <h3>Actividad 1 MOODLE</h3>
-            <a href="https://github.com/c0dy8/m1-python-moodle-week-1/blob/main/m1-python-moodle-week-1.py">CLICK AQUI PARA VER!</a>
-        </div>
-
-        <div class="card">
-            <h3>Actividad 2 MOODLE</h3>
-            <a href="https://github.com/c0dy8/m1_python_Modlee_Week_2">CLICK AQUI PARA VER!</a>
-        </div>
-
-        <div class="card">
-            <h3>Actividad 3 MOODLE</h3>
-             <a href="https://github.com/c0dy8/m1_python_Modlee_Week_3">CLICK AQUI PARA VER!</a>
-        </div>
-
-        <div class="card">
-            <h3>Actividad 4 MOODLE</h3>
-            <a href="https://github.com/c0dy8/Mcarthy-EL-MILAGRO">CLICK AQUI PARA VER!</a>
-        </div>
-
-    </main>
-
-    <footer>
-        <p>Portafolio</p>
-    </footer>
-
-
-    <script>
-        const canvas = document.getElementById("matrixCanvas");
-        const ctx = canvas.getContext("2d");
-
-        canvas.height = window.innerHeight;
-        canvas.width = window.innerWidth;
-
-        const letters = "01";
-        const fontSize = 16;
-        const columns = canvas.width / fontSize;
-
-        const drops = [];
-
-        for (let i = 0; i < columns; i++) {
-            drops[i] = 1;
-        }
-
-        function drawMatrix() {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.07)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = "#00FF00";
-            ctx.font = fontSize + "px monospace";
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = letters[Math.floor(Math.random() * letters.length)];
-
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-
-                drops[i]++;
-            }
-        }
-
-        setInterval(drawMatrix, 40);
-
-        window.onresize = () => {
-            canvas.height = window.innerHeight;
-            canvas.width = window.innerWidth;
-        };
-    </script>
+    </div>
+</section>
 
 </body>
 </html>

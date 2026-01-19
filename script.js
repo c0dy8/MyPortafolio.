@@ -1,22 +1,18 @@
-const robinBtn = document.getElementById("robinBtn");
-const riwiBtn = document.getElementById("riwiBtn");
+const dropdowns = document.querySelectorAll(".dropdown");
 
-const robinMenu = document.getElementById("robinMenu");
-const riwiMenu = document.getElementById("riwiMenu");
+dropdowns.forEach(dropdown => {
+    const button = dropdown.querySelector(".dropdown-btn");
 
-robinBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    robinMenu.classList.toggle("active");
-    riwiMenu.classList.remove("active");
+    button.addEventListener("click", () => {
+        dropdowns.forEach(d => {
+            if (d !== dropdown) d.classList.remove("active");
+        });
+        dropdown.classList.toggle("active");
+    });
 });
 
-riwiBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    riwiMenu.classList.toggle("active");
-    robinMenu.classList.remove("active");
-});
-
-document.addEventListener("click", () => {
-    robinMenu.classList.remove("active");
-    riwiMenu.classList.remove("active");
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".dropdown")) {
+        dropdowns.forEach(d => d.classList.remove("active"));
+    }
 });
